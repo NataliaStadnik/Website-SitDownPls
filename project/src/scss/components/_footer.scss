@@ -1,0 +1,106 @@
+.footer {
+  display: grid;
+  padding-top: 35px;
+
+  &__total {
+    grid-row: 1 / span 1;
+  }
+
+  &__logo {
+    @include grid-elem(1, 1, 1, 2);
+
+    margin-bottom: 31px;
+  }
+
+  &__copyright {
+    grid-row: 2 / span 1;
+    padding: 5px 0;
+    background-color: $grey-hell-background;
+  }
+
+  &__nav {
+    @include grid-elem(1, 2, 5, 8);
+
+    align-self: flex-start;
+    padding-top: 3px;
+  }
+}
+
+.total {
+  padding: 24px 0;
+  background-color: $grey-dark-background;
+}
+
+.socials {
+  @include grid-elem(2, 1, 1, 2);
+
+  display: flex;
+  gap: 20px;
+
+  &__link {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: max-content;
+    height: max-content;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $grey-hell;
+    }
+
+    &::after {
+      left: -3px;
+      top: -3px;
+      width: calc(100% + 6px);
+      height: calc(100% + 6px);
+    }
+
+    @include svg-fill-effect($purple, $purple-dark, $white, $purple-hell);
+  }
+}
+
+.menu {
+  @include flex;
+
+  justify-content: space-between;
+
+  &__title {
+    font-size: 16px;
+    line-height: 16px;
+    color: #333;
+  }
+}
+
+.menu__title:nth-child(2) {
+  flex-basis: 154px;
+}
+
+.menu__title:nth-child(3) {
+  flex-basis: 141px;
+}
+
+.submenu {
+  @include flex;
+
+  flex-direction: column;
+  padding-top: 6px;
+  gap: 8px;
+
+  &__link {
+    line-height: 14px;
+
+    @include link-menu-categ-effect;
+  }
+}
+
+.copyright {
+  @include flex-all-center;
+
+  gap: 10px;
+
+  .link {
+    line-height: 19.07px;
+  }
+}

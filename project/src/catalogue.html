@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  @include('partials/head.html')
+  <link href="css/catalogues.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <div class="site-container catalogue">
+    @include('partials/header.html')
+
+    <main class="container catalogue__container">
+      <ul class="list-reset breadcrumbs" aria-label="Навигационная цепочка по сайту">
+        <li>
+          <a class="link link--start" href="./index.html">Главная /</a>
+        </li>
+        <li>
+          <a class="link link--start" href="#catalogue">Каталог /</a>
+        </li>
+        <li>
+          <a class="link link--start" href="#">Диваны /</a>
+        </li>
+        <li>
+          <a class="link link--end" href="#">Прямые диваны</a>
+        </li>
+      </ul>
+
+      <h1 class="title title--middle catalogue__title" id="catalogue">
+        Каталог
+      </h1>
+
+      @include('partials/catalogue/main-part.html')
+      @include('partials/catalogue/filter.html')
+      @include('partials/catalogue/block-banner.html')
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

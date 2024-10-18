@@ -1,0 +1,9 @@
+@mixin grid-sets($i) {
+  display: grid;
+  grid-template-columns: repeat($i, 1fr);
+}
+
+@mixin grid-elem($a, $b, $c, $d) {
+  grid-column: $c / span $d;
+  grid-row: $a / span $b;
+}

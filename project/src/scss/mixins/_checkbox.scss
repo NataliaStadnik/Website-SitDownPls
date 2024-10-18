@@ -1,0 +1,69 @@
+@mixin custom-checkbox {
+  position: relative;
+
+  &__field {
+    appearance: none;
+    position: absolute;
+    transition: outline .2s ease-in-out, outline-offset .2s ease-in-out;
+  }
+
+  &__content {
+    padding-left: 22px;
+    color: $black;
+    cursor: pointer;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid $grey-hell;
+      border-radius: 2px;
+      width: 15px;
+      height: 15px;
+      box-sizing: border-box;
+      transition: transform 0.2s ease-in-out, background-color .2s ease-in-out, outline .2s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      border-radius: 2px;
+      width: 15px;
+      height: 15px;
+      box-sizing: border-box;
+      background-image: url("../img/svg/check.svg");
+      background-position: center;
+      background-size: 10px 10px;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+}
+
+.custom-checkbox__field:checked+.custom-checkbox__content::after {
+  outline: none;
+  border-color: $purple;
+  background-color: $purple;
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus-visible+.custom-checkbox__content::before {
+  outline: 2px solid $purple;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled+.custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.custom-checkbox__content:hover:not(:focus-visible)::before {
+  background-color: $purple-background;
+  transform: scale(110%);
+}

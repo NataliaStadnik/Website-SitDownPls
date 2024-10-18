@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  @include('partials/head.html')
+  <link href="css/cards.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <div class="site-container element">
+    @include('partials/header.html')
+
+    <main>
+      <ul class="list-reset container breadcrumbs element__breadcrumbs" aria-label="Навигационная цепочка по сайту">
+        <li>
+          <a class="link link--start" href="./index.html">Главная /</a>
+        </li>
+        <li>
+          <a class="link link--start" href="./catalogue.html#catalogue">Каталог /</a>
+        </li>
+        <li>
+          <a class="link link--start" href="#">Диваны /</a>
+        </li>
+        <li>
+          <a class="link link--end" href="#">Прямые диваны /</a>
+        </li>
+        <li>
+          <a class="link link--end" href="#sofa-d31">D-31</a>
+        </li>
+      </ul>
+
+      @include('partials/one_card/upper.html')
+      @include('partials/one_card/details.html')
+      @include('partials/one_card/similars.html')
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

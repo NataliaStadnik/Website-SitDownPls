@@ -1,0 +1,22 @@
+.hero {
+  @include grid-elem(1, 1, 1, 1);
+
+  background-image: url('/img/start-page/hero/hero-1920.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    padding: 80px $container-offset;
+  }
+
+  &__main-title {
+    @include grid-elem(1, 1, 1, 5);
+
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    @include grid-elem(2, 1, 1, 2);
+  }
+}

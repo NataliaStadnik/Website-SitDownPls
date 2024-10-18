@@ -1,0 +1,75 @@
+.useful {
+  @include grid-elem(6, 1, 1, 1);
+
+  &__title {
+    @include grid-elem(1, 1, 1, 12);
+  }
+
+  &__container {
+    row-gap: 26px;
+  }
+}
+
+.useful-list {
+  @include grid-elem(2, 1, 1, 12);
+  @include grid-sets(12);
+
+  gap: 32px;
+
+  &__descr {
+    max-width: 100%;
+    font-size: 24px;
+    line-height: 32.68px;
+  }
+
+  &__article {
+    justify-content: space-between;
+    padding: 457px 27px 30px 30px;
+    min-height: 676px;
+  }
+
+  &__article::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 426px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.useful-list__article--1::after {
+  background-image: url('../img/start-page/useful/useful-1-1920.jpg');
+}
+
+.useful-list__article--2::after {
+  background-image: url('../img/start-page/useful/useful-2-1920.jpg');
+}
+
+.useful-list__article--3::after {
+  background-image: url('../img/start-page/useful/useful-3-1024.jpg');
+}
+
+.useful-list__article--4::after {
+  background-image: url('../img/start-page/useful/useful-4-320.jpg');
+}
+
+.useful-list__article--5::after {
+  background-image: url('../img/start-page/useful/useful-5-320.jpg');
+}
+
+.useful-list__item:nth-child(1) {
+  @include grid-elem(1, 1, 1, 6);
+}
+
+.useful-list__item:nth-child(2) {
+  @include grid-elem(1, 1, 7, 6);
+}
+
+.useful-list__item:nth-child(3),
+.useful-list__item:nth-child(4),
+.useful-list__item:nth-child(5) {
+  display: none;
+}

@@ -1,0 +1,181 @@
+.main-part {
+  @include grid-elem(3, 1, 4, 9);
+}
+
+.catalogue {
+  &__container {
+    padding-bottom: 34px;
+    gap: 33px;
+  }
+
+  &__title {
+    @include grid-elem(2, 1, 4, 9);
+
+    margin-bottom: -11px;
+    line-height: 31.2px;
+  }
+
+  .header {
+    padding-bottom: 23px;
+  }
+
+  &__pagination {
+    @include grid-elem(4, 1, 4, 9);
+  }
+
+  &__banner {
+    @include grid-elem(3, 1, 1, 3);
+
+    align-self: flex-end;
+  }
+
+  .banner {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      grid-row: 2 / span 1;
+      border-radius: 0 0 10px 10px;
+      padding: 30px;
+      background-color: $black;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      font-weight: initial;
+      font-size: initial;
+      line-height: 21.79px;
+      color: $grey-dark;
+    }
+
+    &__img {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .brown {
+      font-size: 24px;
+      line-height: 31.99px;
+    }
+  }
+}
+
+.filter {
+  @include grid-elem(2, 2, 1, 3);
+
+  align-self: flex-start;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+
+  .custom-checkbox__content {
+    padding-left: 33px;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: $grey-dark;
+  }
+
+  .custom-checkbox__content::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-checkbox__content::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.choose {
+  @include flex-list(27px);
+
+  &__title {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: $grey-dark;
+  }
+
+  &__label,
+  &__input::placeholder {
+    line-height: 20.8px;
+    color: $grey-dark;
+  }
+
+  &__input {
+    border: 1px solid $grey-hell;
+    border-radius: 2px;
+    padding: 5px 13px;
+    height: 30px;
+    max-width: 86px;
+
+    @include select-input-effect;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__price {
+    .choose__title {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.choose--active {
+  border-color: $purple-dark;
+  background-color: transparent;
+}
+
+.subchoose {
+  @include flex-list(11px);
+}
+
+.height-list {
+  @include grid-elem(3, 1, 4, 9);
+  @include grid-sets(9);
+}
+
+.height-list__elem:nth-child(1) {
+  @include grid-elem(1, 1, 1, 3);
+}
+
+.height-list__elem:nth-child(2) {
+  @include grid-elem(1, 1, 4, 3);
+}
+
+.height-list__elem:nth-child(3) {
+  @include grid-elem(1, 1, 7, 3);
+}
+
+.height-list__elem:nth-child(4) {
+  @include grid-elem(2, 1, 1, 3);
+}
+
+.height-list__elem:nth-child(5) {
+  @include grid-elem(2, 1, 4, 3);
+}
+
+.height-list__elem:nth-child(6) {
+  @include grid-elem(2, 1, 7, 3);
+}
+
+.height-list__elem:nth-child(7) {
+  @include grid-elem(3, 1, 1, 3);
+}
+
+.height-list__elem:nth-child(8) {
+  @include grid-elem(3, 1, 4, 3);
+}
+
+.height-list__elem:nth-child(9) {
+  @include grid-elem(3, 1, 7, 3);
+}

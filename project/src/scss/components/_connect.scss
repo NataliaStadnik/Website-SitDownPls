@@ -1,0 +1,69 @@
+.connect {
+  @include grid-elem(7, 1, 1, 1);
+
+  padding-bottom: 36px;
+
+  &__title {
+    @include grid-elem(1, 1, 1, 6);
+
+    margin-bottom: 9px;
+  }
+
+  &__descr {
+    @include grid-elem(2, 1, 1, 6);
+
+    margin-bottom: 16px;
+    line-height: 19.07px;
+  }
+
+  &__container {
+    position: relative;
+  }
+}
+
+.form {
+  @include grid-elem(3, 1, 1, 6);
+  @include flex;
+
+  flex-direction: column;
+
+  &__search {
+    padding: 16px 18px;
+
+    @include input-effect(1px);
+  }
+
+  &__search:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .btn--purple {
+    margin-bottom: 15px;
+    padding: 20px 33px;
+  }
+}
+
+.connect__container::after {
+  @include grid-elem(1, 3, 7, 6);
+
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 624px;
+  height: 383px;
+  background-image: url('/img/svg/bigSvg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+}
+
+.custom-checkbox--purple {
+  text-decoration: underline;
+  color: $purple;
+
+  @include simple-link-effect;
+}

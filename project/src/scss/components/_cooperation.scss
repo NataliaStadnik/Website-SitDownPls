@@ -1,0 +1,121 @@
+.cooperation {
+  &__container {
+    grid-auto-flow: column;
+    padding-bottom: 35px;
+    gap: 32px;
+  }
+
+  &__title {
+    @include grid-elem(2, 1, 1, 8);
+  }
+
+  .link {
+    letter-spacing: .2px;
+  }
+
+  .header {
+    padding-bottom: 25px;
+  }
+}
+
+.navigation {
+  @include grid-elem(1, 1, 1, 8);
+}
+
+.providers {
+  @include grid-elem(3, 1, 1, 8);
+}
+
+.getting {
+  @include grid-elem(4, 1, 1, 6);
+}
+
+.preferences {
+  @include grid-elem(5, 1, 1, 8);
+
+  .preferences-list {
+    @include flex-list(12px);
+  }
+
+  .preferences-list__title {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21.79px;
+    color: $orange;
+  }
+}
+
+.guarantee {
+  @include grid-elem(6, 1, 1, 8);
+
+  .guarantee-list {
+    @include flex-list(13px);
+
+    list-style-type: decimal;
+    padding-left: 18px;
+  }
+
+  .guarantee-list__item {
+    padding-left: 9px;
+    color: $orange;
+  }
+}
+
+.message {
+  @include grid-elem(7, 1, 2, 5);
+
+  position: relative;
+  padding: 22px 0;
+  font-size: 24px;
+  line-height: 36px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -109px;
+    top: 0;
+    width: 77px;
+    height: 116px;
+    background-image: url('/img/collaboration/pencil-1920.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
+.simple-text {
+  line-height: 28.8px;
+  color: $grey-dark;
+}
+
+.getting-list {
+  @include flex-list(12px);
+
+  .getting-list__elem {
+    position: relative;
+    padding-left: 37px;
+    line-height: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background-image: url('/img/collaboration/blocks.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  .getting-list__elem:nth-child(2) {
+    &::before {
+      background-image: url('/img/collaboration/suitcase.svg');
+    }
+  }
+
+  .getting-list__elem:nth-child(3) {
+    &::before {
+      background-image: url('/img/collaboration/circles.svg');
+    }
+  }
+}

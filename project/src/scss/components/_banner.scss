@@ -1,0 +1,44 @@
+.banner {
+  @include grid-elem(4, 1, 1, 1);
+
+  display: grid;
+
+  &__picture {
+    @include grid-elem(1, 1, 1, 1);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    @include grid-elem(1, 1, 1, 1);
+
+    grid-template-rows: 150px 1fr max-content 150px;
+  }
+
+  &__btn {
+    @include grid-elem(3, 1, 1, 3);
+
+    padding: 22px 32px;
+  }
+
+  &__title {
+    @include grid-elem(2, 1, 1, 5);
+
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57.6px;
+    color: $white;
+  }
+
+  .brown {
+    display: block;
+    font-family: "Playfair", sans-serif;
+    font-size: 60px;
+    line-height: 72px;
+    color: $brown;
+  }
+}

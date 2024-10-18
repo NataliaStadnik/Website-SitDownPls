@@ -1,0 +1,178 @@
+.link {
+  font-size: 14px;
+  color: $grey-hell;
+}
+
+.link--black {
+  font-size: 16px;
+  color: $black;
+
+  @include link-menu-categ-effect;
+  @include link-black-effect;
+}
+
+.link--start {
+  color: $grey-hell;
+
+  @include simple-link-effect;
+}
+
+.link--end {
+  color: $purple-dark;
+
+  @include simple-link-effect;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65.37px;
+  color: $grey-hell;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.title--middle {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32.68px;
+}
+
+.btn {
+  border-radius: 10px;
+  max-width: max-content;
+  line-height: 16px;
+}
+
+.btn--purple {
+  padding: 22px 50px;
+  font-weight: 700;
+  color: $white;
+  background-color: $purple;
+
+  @include btn-purple-effect;
+}
+
+.btn--transp {
+  border: 2px solid $purple;
+  padding: 17px 35px;
+  color: $purple;
+
+  @include btn-transp-effect;
+}
+
+.pagination {
+  display: flex;
+  justify-self: center;
+  gap: 15px;
+}
+
+.pagination__link {
+  display: inline-block;
+  padding: 6px 10px;
+}
+
+.pagination__link:first-child {
+  @include active;
+
+  &:focus-visible {
+    border-color: $purple-hell;
+  }
+}
+
+.pagination__link:last-child {
+  display: none;
+}
+
+.card-link {
+  position: relative;
+  width: max-content;
+
+  @include flex-v-center;
+
+  font-weight: 700;
+  line-height: 19.2px;
+  color: $purple;
+
+  @include card-link-effect;
+  @include svg-circle(22px, 22px, -2px, -19px);
+  @include svg-arrow-effect;
+}
+
+.svg-arrow {
+  position: relative;
+  left: 12px;
+  top: -1px;
+  z-index: 50;
+  width: 8px;
+  height: 10px;
+  fill: none;
+  stroke: #A65CF0;
+  stroke-width: 2px;
+  transition: stroke .3s ease-in-out;
+}
+
+.breadcrumbs {
+  @include grid-elem(1, 1, 1, 12);
+
+  display: flex;
+  gap: 6px;
+}
+
+@media (max-width: (1260px)) {
+  .breadcrumbs {
+    @include grid-elem(1, 1, 1, 9);
+  }
+}
+
+@media (max-width: (1023px)) {
+  .breadcrumbs {
+    @include grid-elem(1, 1, 1, 6);
+  }
+}
+
+@media (max-width: (576px)) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+
+.price {
+  padding-left: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+  color: $grey-hell;
+}
+
+.new-price {
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: $orange;
+}
+
+.input--active {
+  outline: 1px solid $green;
+  background-color: transparent;
+}
+
+
+.icon {
+  position: absolute;
+  left: 34px;
+  top: 21px;
+  width: 16px;
+  height: 16px;
+  fill: $grey-hell;
+
+  &__purple {
+    fill: $purple;
+  }
+}

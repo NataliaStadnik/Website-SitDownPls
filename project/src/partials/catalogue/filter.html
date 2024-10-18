@@ -1,0 +1,79 @@
+<section class="filter">
+  <h3 class="filter__title">Фильтровать по:</h3>
+
+  <ul class="list-reset choose">
+    <li class="choose__elem">
+      <p class="choose__title">Цвет</p>
+      <ul class="list-reset subchoose">
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="brown" type="checkbox" name="color">
+            <label class="custom-checkbox__content link" for="brown">
+              Коричневый
+            </label>
+          </div>
+        </li>
+
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="black" type="checkbox" name="color">
+            <label class="custom-checkbox__content link" for="black">
+              Черный
+            </label>
+          </div>
+        </li>
+
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="blue" type="checkbox" name="color">
+            <label class="custom-checkbox__content link" for="blue">
+              Синий
+            </label>
+          </div>
+        </li>
+
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="white" type="checkbox" name="color">
+            <label class="custom-checkbox__content link" for="white">
+              Белый
+            </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+
+    <li class="choose__elem">
+      <p class="choose__title">Категория</p>
+      <ul class="list-reset subchoose">
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="sofas" type="checkbox" name="category">
+            <label class="custom-checkbox__content link" for="sofas">
+              Диваны
+            </label>
+          </div>
+        </li>
+
+        <li>
+          <div class="custom-checkbox">
+            <input class="input-reset custom-checkbox__field" id="armchair" type="checkbox" name="category">
+            <label class="custom-checkbox__content link" for="armchair">
+              Кресла
+            </label>
+          </div>
+        </li>
+      </ul>
+    </li>
+
+    <li class="choose__elem choose__price">
+      <p class="choose__title">Цена</p>
+      <div class="choose__wrap">
+        <label class="choose__label" for="from">от</label>
+        <input class="input-reset choose__input" id="from" type="number" name="price" placeholder="2000">
+        <label class="choose__label" for="to">до</label>
+        <input class="input-reset choose__input" id="to" type="number" name="price" placeholder="150 000">
+      </div>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,81 @@
+.tops {
+  @include grid-elem(5, 1, 1, 1);
+
+  &__title {
+    @include grid-elem(1, 1, 1, 12);
+  }
+
+  &__container {
+    row-gap: 26px;
+  }
+}
+
+.mini-link {
+  display: none;
+
+  .svg-arrow {
+    left: 13px;
+    top: -3px;
+    height: 11px;
+  }
+
+  @include svg-circle(22px, 22px, -2px, -20px);
+  @include svg-arrow-effect;
+}
+
+.tops-list {
+  @include grid-elem(2, 1, 1, 12);
+  @include grid-sets(12);
+
+  gap: 34px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .card__img {
+    position: relative;
+    left: -30px;
+    margin-bottom: 32px;
+  }
+}
+
+.tops-list__item:nth-child(1) {
+  @include grid-elem(1, 1, 1, 6);
+}
+
+.tops-list__item:nth-child(2) {
+  @include grid-elem(1, 1, 7, 6);
+}
+
+.tops-list__item:nth-child(3) {
+  @include grid-elem(2, 1, 1, 4);
+}
+
+.tops-list__item:nth-child(4) {
+  @include grid-elem(2, 1, 5, 4);
+
+  .categories {
+    gap: 26px;
+  }
+}
+
+.tops-list__item:nth-child(5) {
+  @include grid-elem(2, 1, 9, 4);
+
+  .categories {
+    gap: 42px;
+  }
+}
+
+.categories {
+  @include flex;
+
+  margin-bottom: 14px;
+  gap: 30px;
+
+  &__link {
+    @include link-menu-categ-effect;
+  }
+}

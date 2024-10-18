@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  @include('partials/head.html')
+  <link href="css/cooperations.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <div class="site-container cooperation">
+    @include('partials/header.html')
+
+    <main class="container cooperation__container">
+      <ul class="list-reset breadcrumbs" aria-label="Навигационная цепочка по сайту">
+        <li>
+          <a class="link link--start" href="./index.html">Главная /</a>
+        </li>
+        <li>
+          <a class="link link--end" href="./cooperations.html#cooperations">Сотрудничество</a>
+        </li>
+      </ul>
+
+      @include('partials/cooperation/cooperation.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

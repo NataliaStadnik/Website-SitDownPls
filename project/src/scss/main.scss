@@ -1,0 +1,27 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/specials";
+@import "./components/height";
+@import "./components/banner";
+@import "./components/top";
+@import "./components/useful";
+@import "./components/connect";
+@import "./components/footer";
+
+@include header-bp;
+@include hight-list-bp;
+@include big-desktop;
+@include tablet;
+@include small-tablet;
+@include mobile;
+@include mobile-mini;
+@include footer-bp;
+

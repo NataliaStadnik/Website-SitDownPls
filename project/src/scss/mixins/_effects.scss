@@ -1,0 +1,319 @@
+@mixin active() {
+  border-color: $purple-dark;
+  color: $white;
+  background-color: $purple-dark;
+}
+
+@mixin btn-purple-effect {
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out, color .3s ease-in-out;
+
+  &:hover:not(:focus-visible, :disabled) {
+    background-color: $purple-hell;
+  }
+
+  &:focus-visible:not(:disabled) {
+    outline: 2px solid $purple-dark;
+    background-color: $purple-hell;
+  }
+
+  &:active:not(:focus-visible, :disabled) {
+    @include active;
+  }
+
+  &:disabled {
+    color: $grey-hell;
+    background-color: $grey-dark-background;
+  }
+}
+
+@mixin btn-transp-effect {
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+
+  &:hover:not(:focus-visible) {
+    color: $white;
+    background-color: $purple;
+  }
+
+  &:focus-visible {
+    border-color: $purple;
+    color: $white;
+    background-color: $purple-hell;
+  }
+
+  &:active:not(:focus-visible) {
+    @include active;
+  }
+}
+
+@mixin link-menu-categ-effect {
+  position: relative;
+  z-index: 5;
+  transition: color .3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -1px;
+    z-index: -5;
+    width: calc(100% + 16px);
+    height: calc(100% + 2px);
+    transition: background-color .3s ease-in-out;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $purple;
+  }
+
+  &:focus-visible {
+    color: $purple-dark;
+
+    &::before {
+      background-color: $purple-pink;
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    color: $purple-dark;
+  }
+}
+
+@mixin link-black-effect {
+  &:focus-visible {
+    color: $black;
+  }
+}
+
+@mixin phone-effect {
+  transition: color .3s ease-in-out;
+
+  svg {
+    transition: fill .3s ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -4px;
+    z-index: -5;
+    width: calc(100% + 4px);
+    height: calc(100% + 8px);
+    transition: background-color .3s ease-in-out;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $orange-hell;
+
+    svg {
+      fill: $orange-hell;
+    }
+  }
+
+  &:focus-visible {
+    &::before {
+      background-color: #FFF5D1;
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    color: $orange-dark;
+
+    svg {
+      fill: $orange-dark;
+    }
+  }
+}
+
+@mixin input-effect($i) {
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+
+  &:hover:not(:focus-visible) {
+    background-color: $grey-dark-background;
+  }
+
+  &:focus-visible {
+    outline: $i solid $purple;
+    background-color: $purple-background;
+  }
+}
+
+@mixin svg-fill-effect($fill-hov, $fill-act, $fill-foc, $bgc-foc) {
+  svg {
+    transition: fill .3s ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -5;
+    transition: background-color .3s ease-in-out;
+  }
+
+  &:hover:not(:focus-visible) {
+    svg {
+      fill: $fill-hov;
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    svg {
+      fill: $fill-act;
+    }
+  }
+
+  &:focus-visible {
+    &::after {
+      background-color: $bgc-foc;
+    }
+
+    svg {
+      fill: $fill-foc;
+    }
+  }
+}
+
+@mixin simple-link-effect {
+  transition: outline .2s ease-in-out, color .2s ease-in-out;
+
+  &:focus-visible {
+    outline: 1px solid $purple;
+    outline-offset: 2px;
+  }
+
+  &:hover:not(:focus-visible) {
+    color: $purple-hell;
+  }
+
+  &:active:not(:focus-visible) {
+    color: $purple-dark;
+  }
+}
+
+@mixin svg-circle($a, $b, $c, $d) {
+  &::after {
+    content: "";
+    position: absolute;
+    right: $d;
+    top: $c;
+    z-index: 20;
+    border: 2px solid $purple;
+    border-radius: 20px;
+    width: $a;
+    height: $b;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+  }
+}
+
+@mixin svg-arrow-effect {
+  &:hover:not(:focus-visible, :disabled) {
+    .svg-arrow {
+      stroke: $white;
+    }
+
+    &::after {
+      background-color: $purple;
+    }
+  }
+
+  &:focus-visible:not(:disabled) {
+    .svg-arrow {
+      stroke: $white;
+    }
+
+    &::after {
+      background-color: $purple-hell;
+    }
+  }
+
+  &:active:not(:focus-visible, :disabled) {
+    .svg-arrow {
+      stroke: $white;
+    }
+
+    &::after {
+      border-color: $purple-dark;
+      background-color: $purple-dark;
+    }
+  }
+
+  &:disabled {
+    cursor: auto;
+
+    .svg-arrow {
+      stroke: $grey-hell;
+    }
+
+    &::after {
+      border-color: $grey-hell;
+      background-color: transparent;
+    }
+  }
+}
+
+@mixin card-link-effect {
+  transition: color .3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: calc(100% - 8px);
+    height: 2px;
+    background-color: $purple;
+    transform: scale(0);
+    transition: transform .3s ease-in, background-color .3s ease-in;
+  }
+
+  &:hover:not(:focus-visible) {
+    &::before {
+      transform: scale(1);
+    }
+  }
+
+  &:focus-visible {
+    &::before {
+      transform: scale(1);
+    }
+  }
+
+  &:active:not(:focus-visible) {
+    color: $purple-dark;
+
+    &::before {
+      background-color: $purple-dark;
+    }
+  }
+}
+
+@mixin select-input-effect {
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+  &:hover:not(:focus-visible) {
+    border-color: $purple;
+  }
+
+  &:focus-visible {
+    border-color: $purple;
+    background-color: $purple-pink;
+  }
+}
+
+
+
+// Изменение карточек
+
+.height-list__card {
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+
+  &:hover:not(:focus-visible) {
+    box-shadow: 0.1em 0.1em 1em rgba(51, 51, 51, .3);
+    transform: scale(104%);
+  }
+}
+
+.height-list__link:focus-visible {
+  outline: 1px solid $purple;
+  outline-offset: 6px;
+}

@@ -1,0 +1,123 @@
+.element {
+  .header {
+    padding-bottom: 21px;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 48px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__level {
+    left: 0;
+  }
+
+  &__descr {
+    margin-bottom: 21px;
+  }
+
+  &__price {
+    margin-bottom: 21px;
+    font-size: 36px;
+    line-height: 46.8px;
+  }
+
+  &__btn {
+    margin-bottom: 11px;
+    padding: 20px 35px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__add {
+    position: relative;
+    left: 30px;
+    width: max-content;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: $purple;
+
+    @include simple-link-effect;
+  }
+}
+
+.upper-part {
+  align-items: flex-start;
+  padding-bottom: 55px;
+
+  &__title {
+    margin-bottom: 5px;
+    line-height: 31.2px;
+  }
+
+  &__picture {
+    @include grid-elem(2, 1, 1, 6);
+  }
+
+  &__wrapper {
+    @include grid-elem(2, 1, 7, 6);
+  }
+}
+
+.details {
+  padding-top: 55px;
+  padding-bottom: 42px;
+  row-gap: 105px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &__descr {
+    display: flex;
+    font-size: 14px;
+    line-height: 25px;
+    color: $grey-hell;
+  }
+
+  &__descr__black {
+    color: $black;
+  }
+
+  .left-part {
+    @include grid-elem(1, 1, 1, 6);
+    @include flex-list(8px);
+  }
+
+  &__picture {
+    @include grid-elem(2, 1, 1, 6);
+  }
+
+  .right-part {
+    @include grid-elem(1, 2, 7, 6);
+  }
+
+  .descriptions__item {
+    line-height: 25.2px;
+    color: $grey-hell;
+  }
+
+  .position {
+    overflow-x: hidden;
+    max-width: 328px;
+    white-space: nowrap;
+  }
+}
+
+.similars {
+  padding-top: 41px;
+  padding-bottom: 35px;
+
+  &__title {
+    @include grid-elem(1, 1, 1, 12);
+
+    margin-bottom: 21px;
+  }
+}
