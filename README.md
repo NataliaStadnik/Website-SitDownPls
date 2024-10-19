@@ -3,7 +3,7 @@
 Многостраничный сайт интернет-магазина мягкой мебели 'SitDownPls'
 
 _Ccылка на макет в Figma:_
-[Blanchard](https://www.figma.com/design/ZPj1HpZoklEXl7hKmYPGd2/sdp.ru)
+[SitDownPls](https://www.figma.com/design/ZPj1HpZoklEXl7hKmYPGd2/sdp.ru)
 
 - Cемантическая Grid-верстка на все разрешения экрана
 - Адаптив на все разрешения экрана
@@ -27,3 +27,5 @@ _C помощью Gulp:_
 2. Страница каталога
 3. Страница карточки товара
 4. Сотрудничество
+
+<img src='https://github.com/NataliaStadnik/images/blob/main/sitdownpls.jpg' alt='website SitDownPls'
